@@ -1,0 +1,27 @@
+<?php
+	if(isset($_COOKIE["Suman"]))
+	{
+		$name="Suman";
+		$content=$_COOKIE["Suman"]+1;
+		$expiry=time()+(60*60*24*7*1);
+		setcookie($name,$content,$expiry);
+	}
+	else
+	{
+		$name="Suman";
+		$content=1;
+		$expiry=time()+(60*60*24*7*1);
+		setcookie($name,$content,$expiry);
+	}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php
+	echo $_COOKIE["Suman"];
+?>
+</body>
+</html>
